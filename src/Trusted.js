@@ -44,7 +44,7 @@ export default function Trusted() {
       <div className="carousel-item">
         <div className="card-row">
 
-          <div className="mini-card"><img src="/images/ins42.png" alt="" /></div>
+          <div className="mini-card"><img src={process.env.PUBLIC_URL + "/images/ins42.png"} /></div>
           <div className="mini-card"><img src="/images/lifehack.png" alt="" /></div>
           <div className="mini-card"><img src="/images/fast-company.png" alt="" /></div>
           <div className="mini-card"><img src="/images/elitedaily.png" alt="" /></div>

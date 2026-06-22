@@ -22,32 +22,28 @@ export default function Footer() {
             <h4 className="mb-3 text-primary">Useful Links____</h4>
 
             <ul className="list-unstyled m-0 p-0">
-              <li className="mb-2 footer-link">
-                <Link to="/about" className="text-light text-decoration-none">
-                  About
-                </Link>
-              </li>
+              
 
               <li className="mb-2 footer-link">
-                <Link to="/about" className="text-light text-decoration-none">
+                <Link to="/" className="text-light text-decoration-none">
                   About
                 </Link>
               </li>
               
 
               <li className="mb-2 footer-link">
-                <Link to="/feature" className="text-light text-decoration-none">
+                <Link to="/" className="text-light text-decoration-none">
                   Feature
                 </Link>
               </li>
 
               <li className="mb-2 footer-link">
-                <Link to="/contact" className="text-light text-decoration-none">
+                <Link to="/" className="text-light text-decoration-none">
                   Contact
                 </Link>
               </li>
               <li className="mb-2 footer-link">
-                <Link to="/help" className="text-light text-decoration-none">
+                <Link to="" className="text-light text-decoration-none">
                   Help
                 </Link>
               </li>
