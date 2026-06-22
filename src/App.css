@@ -1,38 +1,282 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+/* navbar start */
+.navbar .nav-link {
+  color: #333 !important;
+}
+
+.navbar .nav-link:hover {
+  color: #0d6efd !important;
+}
+.hero-img {
+  max-width: 350px;
+  animation: floatUpDown 3s ease-in-out infinite;
+  display: inline-block;
+}
+
+.hero-img:hover {
+  transform: translateY(-20px) scale(1.05);
+}
+/* nav end */
+/* publisher start */
+.gradient-text {
+  background: linear-gradient(#333, #00c6ff, #00c6ff);
   text-align: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* publisher end */
+/* platform start */
+.step-card {
+  position: relative;
+  overflow: visible; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.step-badge {
+  position: absolute;
+  top: -12px;   
+  left: 15px;
+
+  background: #0d6efd;
+  color: white;
+
+  font-size: 12px;
+  font-weight: bold;
+
+  padding: 6px 12px;
+  border-radius: 4px; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-.App-header {
-  background-color: #282c34;
+
+
+.step-card {
+  
+  transition: all 0.3s ease;
+
+
+ 
+}
+
+
+.step-card:hover {
+  
+  transform: translateY(-10px);
+
+
+ 
+}
+
+.blue-glow {
+  position: relative;
+}
+
+.blue-glow::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  height: 85%;
+  background: rgba(13, 110, 253, 0.1);
+  filter: blur(50px);
+  border-radius: 30px;
+  z-index: -1;
+}
+/* platform end */
+
+/* exper section start */
+/* arrows visible + on sides */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 1%;
+  opacity: 1;
+}
+
+/* make icons visible */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #0d6efd;  /* blue visible arrow */
+  border-radius: 50%;
+  padding: 15px;
+}
+
+/* bring arrows above cards */
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 10;
+}
+/* exper section start */
+.expert-wrapper {
+  position: relative;
   min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Background layer */
+.expert-bg {
+  position: absolute;
+  inset: 0;
+ 
+  background-size: 140%;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: zoomMove 2s ease-in-out infinite;
+  transform: skewY(-6deg) scale(1.1);
+  z-index: -1;
+}
+
+
+/* exper section end */
+
+/* trusted section start */
+.card-row {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.mini-card {
+  flex: 1;
+  min-width: 100px;
+  height: 90px;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: 0.1s;
 }
 
-.App-link {
-  color: #61dafb;
+.mini-card img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mini-card:hover {
+  transform: translateY(-2px);
 }
+/* trusted section end */
+/* popular start */
+.pop-card {
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+/* CARD HOVER */
+.pop-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* IMAGE HOVER */
+.pop-card img {
+  transition: 0.4s ease;
+}
+
+.pop-card:hover img {
+  transform: scale(1.05);
+}
+
+/* LINK hover */
+.pop-link {
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.pop-link:hover {
+  padding-left: 10px;
+  color: #0a58ca !important;
+}
+
+/* BUTTON */
+.pop-btn {
+  background: #4e73df;
+  padding: 12px 40px;
+  transition: 0.3s ease;
+}
+
+/* BUTTON HOVER */
+.pop-btn:hover {
+  background: #2e59d9;
+  transform: scale(1.05);
+}
+/* end */
+/* footer start */
+.footer-link {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* hover background (full section effect) */
+.footer-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  padding-left: 15px;
+  border-radius: 5px;
+}
+
+/* arrow effect */
+.footer-link::before {
+  content: "→";
+  position: absolute;
+  left: 5px;
+  opacity: 0;
+  transition: 0.3s ease;
+  color: #0d6efd;
+}
+
+.footer-link:hover::before {
+  opacity: 1;
+}
+/* footer end */
+/* help start */
+.hello{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.help-card{
+    border: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.help-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2) !important;
+    background: #0d6efd;
+    color: white;
+}
+
+.help-card:hover p{
+    color: white !important;
+}
+
+.form-control{
+    border-radius: 50px 0 0 50px !important;
+}
+
+.btn{
+    border-radius: 0 50px 50px 0 !important;
+}
+/* help end */
+/* contact start */
