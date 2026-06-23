@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 
 export default function Expert() {
-  
+
+  // ✅ IMAGE HELPER (IMPORTANT FOR GITHUB PAGES)
+  const img = (name) =>
+    process.env.PUBLIC_URL + "/images/" + name;
+
   const [formdata, setformdata] = useState({
     name: "",
     email: "",
@@ -11,7 +15,7 @@ export default function Expert() {
 
   const handleChange = (e) => {
     setformdata({
-    formdata,
+      ...formdata,
       [e.target.name]: e.target.value,
     });
   };
@@ -25,54 +29,66 @@ export default function Expert() {
       !formdata.phone ||
       !formdata.message
     ) {
-      alert("please putt form data");
+      alert("Please fill all fields");
       return;
     }
 
     alert("Successfully sent your message");
-     
+
+    setformdata({
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    });
   };
 
   return (
     <div className="expert-wrapper">
-      
-      {/* Background */}
+
       <div className="expert-bg" />
 
       <div className="container py-5">
         <div className="row align-items-center">
 
-          {/* Left */}
+          {/* LEFT SIDE */}
           <div className="col-md-5">
-            <h1 className="fw-bold text-primary mb-3 text-nowrap">
+            <h1 className="fw-bold text-primary mb-3">
               Consult with our Experts
             </h1>
 
             <p className="text-muted lh-lg">
-              Publishers might have detailed questions on areas like creating their account, adding their sites and accessing money from their wallets. Our experts and support teams are always ready and available to help them with any of the above concerns.
-            </p>
-
-            <p className="text-muted lh-lg">
-              All you need to do is fill in the Contact Form on the right, write down the details that are asked for and wait for our support team to get in touch with you. We try to address all the concerns of our publishers within 24-48 hours.
+              Support team helps publishers with account setup and payments.
             </p>
 
             <div className="d-flex gap-3 mt-4 flex-wrap">
 
+              {/* MAIL BUTTON */}
               <button className="btn btn-primary px-4 rounded-pill d-flex align-items-center gap-2">
-                <img src="/images/mail.png" alt="mail" style={{ width: "18px", height: "18px" }} />
+                <img
+                  src={img("mail.png")}
+                  alt="mail"
+                  style={{ width: "18px", height: "18px" }}
+                />
                 Mail
               </button>
 
+              {/* SKYPE BUTTON */}
               <button className="btn btn-outline-primary px-4 rounded-pill d-flex align-items-center gap-2">
-                <img src="/images/skype.png" alt="skype" style={{ width: "18px", height: "18px" }} />
+                <img
+                  src={img("skype.png")}
+                  alt="skype"
+                  style={{ width: "18px", height: "18px" }}
+                />
                 Skype
               </button>
 
             </div>
           </div>
 
-          {/* Right Form */}
+          {/* RIGHT FORM */}
           <div className="col-md-6 offset-md-1 mt-4 mt-md-0">
+
             <div className="card shadow-lg border-0 p-4 rounded-4">
 
               <h4 className="text-center text-primary mb-3 fw-bold">
@@ -121,6 +137,7 @@ export default function Expert() {
               </form>
 
             </div>
+
           </div>
 
         </div>

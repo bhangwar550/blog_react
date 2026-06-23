@@ -7,7 +7,7 @@ export default function Header() {
   return (
    
     <div
-      className="container-fluid py-5"
+      className="container-fluid py-5" 
       style={{
         backgroundImage: "url('/images/1.svg')",
         backgroundSize: "cover",

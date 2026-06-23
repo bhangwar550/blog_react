@@ -17,55 +17,47 @@ import Trusted from "./Trusted";
 import Popular from "./Popular";
 import Footer from "./Footer";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-
-
-
-
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="header">
+    <div className="header">
 
-        {/* Navbar always visible */}
-        <Navbar />
+      {/* Navbar always visible */}
+      <Navbar />
 
-        <Routes>
+      <Routes>
 
-          {/* HOME PAGE */}
-          <Route
-            path="/"
-            element={
-              <>
-                <Header />
-                <Publisher />
-                <Management />
-                <Platform />
-                <Feadback />
-                <Expert />
-                <Trusted />
-                <Popular />
-                <Footer />
-              </>
-            }
-          />
+        {/* HOME PAGE */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Header />
+              <Publisher />
+              <Management />
+              <Platform />
+              <Feadback />
+              <Expert />
+              <Trusted />
+              <Popular />
+              <Footer />
+            </>
+          }
+        />
 
-          {/* FEATURE PAGE */}
-         
+        {/* OTHER PAGES */}
         <Route path="/feature" element={<Feature />} />
-        
-     <Route path="/about" element={<About />} />
-     <Route path="/Help" element={<Help/>} />
-      <Route path="/Blog" element={<Blog/>} />
-      <Route path="/Contact" element={<Contact/>} />
-      <Route path="/Login" element={<Login/>} />
-     <Route path="/signup" element={<Signup />} />
-        </Routes>
+        <Route path="/about" element={<About />} />
+        <Route path="/help" element={<Help />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
 
-      </div>
-    </BrowserRouter>
+      </Routes>
+
+    </div>
   );
 }
 

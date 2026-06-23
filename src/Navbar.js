@@ -65,13 +65,16 @@ export default function Navbar() {
 
           </ul>
 
-          {/* Right Button */}
-          <Link
-            className="btn btn-primary px-4 rounded-pill ms-lg-3 mt-3 mt-lg-0"
-            to="/signup"
-          >
-            Sign Up
-          </Link>
+          {/* Button */}
+          <div className="mt-3 mt-lg-0">
+            <Link
+              className="btn btn-primary px-4 rounded-pill ms-lg-3"
+              to="/signup"
+            >
+              Sign Up
+            </Link>
+          </div>
+
         </div>
 
       </div>

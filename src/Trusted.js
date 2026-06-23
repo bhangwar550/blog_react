@@ -45,13 +45,28 @@ export default function Trusted() {
         <div className="card-row">
 
           <div className="mini-card"><img src={process.env.PUBLIC_URL + "/images/ins42.png"} /></div>
-          <div className="mini-card"><img src="/images/lifehack.png" alt="" /></div>
-          <div className="mini-card"><img src="/images/fast-company.png" alt="" /></div>
-          <div className="mini-card"><img src="/images/elitedaily.png" alt="" /></div>
-          <div className="mini-card"><img src="/images/The_Guardian.png" alt="" /></div>
-          <div className="mini-card"><img src="/images/thepenny.png" alt="" /></div>
-          <div className="mini-card"><img src="/images/thought-catalog.png" alt="" /></div>
-          <div className="mini-card"><img src="/images/thewrite.png" alt="" /></div>
+           <div className="mini-card"><img src={process.env.PUBLIC_URL + "/images/lifehack.png"} /></div>
+          <div className="mini-card"><img src={process.env.PUBLIC_URL + "/images/fast-company.png"} /></div>
+         
+          <div className="mini-card">
+  <img src={process.env.PUBLIC_URL + "/images/elitedaily.png"} alt="" />
+</div>
+
+<div className="mini-card">
+  <img src={process.env.PUBLIC_URL + "/images/The_Guardian.png"} alt="" />
+</div>
+
+<div className="mini-card">
+  <img src={process.env.PUBLIC_URL + "/images/thepenny.png"} alt="" />
+</div>
+
+<div className="mini-card">
+  <img src={process.env.PUBLIC_URL + "/images/thought-catalog.png"} alt="" />
+</div>
+
+<div className="mini-card">
+  <img src={process.env.PUBLIC_URL + "/images/thewrite.png"} alt="" />
+</div>
 
         </div>
       </div>
